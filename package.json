@@ -1,8 +1,10 @@
 {
   "name": "emoji-rating",
   "version": "0.0.1",
-  "main": "out/bundle.js",
-  "module": "src/main.js",
+  "main": "out/emojiRating.js",
+  "umd:main": "out/emojiRating.umd.js",
+  "module": "out/emojiRating.mjs",
+  "source": "src/emojiRating.js",
   "homepage": "https://github.com/dkundel/emoji-rating",
   "description": "Web Component for emoji-based rating (instead of stars)",
   "license": "MIT",
@@ -12,9 +14,10 @@
     "url": "https://dkundel.com"
   },
   "scripts": {
+    "prepublishOnly": "npm run build",
     "start": "parcel example/index.html",
-    "build": "npm run rollup",
-    "rollup": "rollup src/main.js --format umd --name \"emojiRating\" --file out/bundle.js",
+    "build": "npm run microbundle",
+    "microbundle": "microbundle",
     "test": "echo \"No tests specified\" && exit 0",
     "lint": "eslint .",
     "pretest": "npm run lint",
@@ -30,8 +33,15 @@
     "all-contributors-cli": "^4.11.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "eslint": "^4.19.1",
-    "parcel-bundler": "^1.8.1",
-    "rollup": "^0.60.1"
+    "microbundle": "^0.4.4",
+    "parcel-bundler": "^1.8.1"
   },
-  "repository": "dkundel/emoji-rating"
+  "repository": "dkundel/emoji-rating",
+  "files": [
+    "out/",
+    "src/",
+    "README.md",
+    "LICENSE",
+    "CODE_OF_CONDUCT.md"
+  ]
 }
