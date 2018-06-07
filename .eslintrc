@@ -1,3 +1,6 @@
 {
-  "extends": ["@dkundel/js", "@dkundel/js/jest"]
+  "extends": ["@dkundel/js", "@dkundel/js/jest"],
+  "rules": {
+    "class-method-use-this": "off"
+  }
 }
