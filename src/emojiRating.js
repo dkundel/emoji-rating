@@ -39,8 +39,15 @@ export default class EmojiRating extends LitElement {
 
   async _setValueOnClick(evt) {
     const value = parseInt(evt.target.dataset.idx, 10) + 1;
-    this.value = value;
+    if (value === this.value) {
+      this.value = 0;
+    } else {
+      this.value = value;
+    }
     await this.renderComplete;
+    this.dispatchEvent(
+      new CustomEvent('change', { detail: { value: this.value } })
+    );
     return this.value;
   }
 
