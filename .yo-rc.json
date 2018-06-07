@@ -1,0 +1,12 @@
+{
+  "generator-dk": {
+    "promptValues": {
+      "githubAccount": "dkundel",
+      "authorName": "Dominik Kundel",
+      "authorEmail": "dominik.kundel@gmail.com",
+      "authorUrl": "https://dkundel.com",
+      "type": "module",
+      "typescript": false
+    }
+  }
+}

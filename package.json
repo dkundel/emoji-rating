@@ -1,0 +1,28 @@
+{
+  "name": "emoji-rating",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dkundel/emoji-rating",
+  "description": "Web Component for emoji-based rating (instead of stars)",
+  "license": "MIT",
+  "author": {
+    "name": "dominik.kundel@gmail.com",
+    "email": "dominik.kundel@gmail.com",
+    "url": "https://dkundel.com"
+  },
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"No tests specified\" && exit 0",
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "contrib:add": "all-contributors add",
+    "contrib:gen": "all-contributors generate"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "@dkundel/eslint-config-js": "^2.0.0",
+    "all-contributors-cli": "^4.11.1"
+  },
+  "repository": "dkundel/emoji-rating",
+  "main": "index.js"
+}
