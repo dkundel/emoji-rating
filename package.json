@@ -32,7 +32,6 @@
     "all-contributors-cli": "^4.11.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "eslint": "^4.19.1",
-    "microbundle": "^0.4.4",
     "parcel-bundler": "^1.8.1",
     "rollup": "^0.60.1",
     "rollup-plugin-node-resolve": "^3.3.0",
