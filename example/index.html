@@ -11,14 +11,6 @@
 <body>
   <h1>How do you feel today?</h1>
   <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
-  <script src="../src/emojiRating.js"></script>
-  <emoji-rating value="2" emoji="🦄"></emoji-rating>
-  <script>
-    document.querySelector('emoji-rating').addEventListener('change', event => {
-      const val = event.target.value;
-      console.log('Current value: %d', val);
-    });
-  </script>
 </body>
 
 </html>
