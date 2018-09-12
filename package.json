@@ -24,15 +24,15 @@
     "contrib:gen": "all-contributors generate"
   },
   "dependencies": {
-    "@polymer/lit-element": "^0.5.1"
+    "@polymer/lit-element": "^0.6.0-dev.6"
   },
   "devDependencies": {
     "@dkundel/eslint-config-js": "^2.0.0",
-    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "@webcomponents/webcomponentsjs": "^2.1.1",
     "all-contributors-cli": "^4.11.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "eslint": "^4.19.1",
-    "parcel-bundler": "^1.8.1",
+    "parcel-bundler": "^1.9.7",
     "rollup": "^0.60.1",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-terser": "^1.0.1"
