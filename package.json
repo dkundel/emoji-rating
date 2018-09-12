@@ -40,7 +40,7 @@
   "repository": "dkundel/emoji-rating",
   "files": [
     "out/",
-    "src/",
+    "src/emojiRating.js",
     "README.md",
     "LICENSE",
     "CODE_OF_CONDUCT.md"
