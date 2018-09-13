@@ -1,9 +1,22 @@
 import { html, LitElement } from '@polymer/lit-element';
-import { repeat } from 'lit-html/lib/repeat';
+import { repeat } from 'lit-html/directives/repeat';
 
 export default class EmojiRating extends LitElement {
   static get properties() {
-    return { value: Number, min: Number, max: Number, emoji: String };
+    return {
+      emoji: {
+        type: String,
+      },
+      min: {
+        type: Number,
+      },
+      max: {
+        type: Number,
+      },
+      value: {
+        type: Number,
+      },
+    };
   }
 
   constructor() {
@@ -13,38 +26,53 @@ export default class EmojiRating extends LitElement {
     this.value = 0;
     this.emoji = '🐼';
     this._renderEmoji = this._renderEmoji.bind(this);
-    this._setValueOnClick = this._setValueOnClick.bind(this);
+    this._handleClick = this._handleClick.bind(this);
   }
 
-  _render({ min, max, value, emoji }) {
+  render() {
+    const { emoji, min, max, value } = this;
     const emojiArray = [...emoji.repeat(max)];
     return html`
-    <style> .rating {display: flex; font-size: 3em; } .emoji {cursor: pointer; color: rgba(0,0,0,0); text-shadow: 0px 0px 0px var(--emoji-rating-unselected-color, #444); } .emoji.active { color: rgba(0,0,0,1); } </style>
-    <div class="rating" aria-role="range" aria-valuemin$="${min}" aria-valuemax$="${max}" aria-valuenow$="${value}">
-      ${repeat(emojiArray, (emoji, idx) => idx, this._renderEmoji)}
-    </div>
+      <style>
+        .rating {
+          display: flex;
+          font-size: 3em;
+        }
+
+        .emoji {
+          cursor: pointer;
+          color: rgba(0, 0, 0, 0);
+          text-shadow: 0px 0px 0px var(--emoji-rating-unselected-color, #444);
+        }
+
+        .emoji.active {
+          color: rgba(0, 0, 0, 1);
+        }
+      </style>
+      <div class="rating" aria-valuemin="${min}" aria-valuemax="${max}" aria-valuenow="${value}">
+        ${repeat(emojiArray, this._renderEmoji)}
+      </div>
     `;
   }
 
-  async _setValueOnClick(evt) {
-    const value = parseInt(evt.target.dataset.idx, 10) + 1;
+  _renderEmoji(emoji, idx) {
+    const activeClass = idx < this.value ? 'active' : '';
+    return html`
+      <div class="emoji ${activeClass}" @click="${
+      this._handleClick
+    }" data-idx="${idx}">${emoji}</div>
+    `;
+  }
+
+  async _handleClick(event) {
+    const value = parseInt(event.target.dataset.idx, 10) + 1;
     if (value === this.value) {
       this.value = 0;
     } else {
       this.value = value;
     }
-    await this.renderComplete;
-    this.dispatchEvent(
-      new CustomEvent('change', { detail: { value: this.value } })
-    );
-    return this.value;
-  }
-
-  _renderEmoji(emoji, idx) {
-    const value = this.value;
-    return html`<div class$="emoji ${
-      idx < value ? 'active' : ''
-    }" data-idx$="${idx}" on-click="${this._setValueOnClick}">${emoji}</div>`;
+    await this.updateComplete;
+    this.dispatchEvent(new CustomEvent('change', { detail: { value } }));
   }
 }
 
