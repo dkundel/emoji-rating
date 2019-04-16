@@ -42,6 +42,12 @@ export default class EmojiRating extends LitElement {
     return html`
       <style>
         .rating {
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
           display: flex;
           font-size: ${size + 'px'};
         }
