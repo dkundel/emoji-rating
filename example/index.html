@@ -12,12 +12,7 @@
   <h1>How do you feel today?</h1>
   <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
   <script src="../src/emojiRating.js"></script>
-
-  <p>With readOnly</p>
-  <emoji-rating value="2" emoji="🦄" readOnly></emoji-rating>
-  <p>Without readOnly</p>
   <emoji-rating value="2" emoji="🦄"></emoji-rating>
-  
   <script>
     document.querySelector('emoji-rating').addEventListener('change', event => {
       const val = event.target.value;
