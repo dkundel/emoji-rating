@@ -14,7 +14,7 @@ export default class EmojiRating extends LitElement {
         type: Number,
       },
       emoji: {
-        type: String,
+        type: String, 
       },
       size: {
         type: String,
@@ -37,11 +37,12 @@ export default class EmojiRating extends LitElement {
   }
 
   render() {
-    const { min, max, value, emoji, size, readOnly } = this;
+    const { min, max, value, emoji, size } = this;
     const emojiArray = [...emoji.repeat(max)];
     return html`
       <style>
         .rating {
+          --emoji-rating-size: ${size};
           -webkit-touch-callout: none;
           -webkit-user-select: none;
           -khtml-user-select: none;
@@ -49,7 +50,7 @@ export default class EmojiRating extends LitElement {
           -ms-user-select: none;
           user-select: none;
           display: flex;
-          font-size: ${size + 'px'};
+          font-size: var(--emoji-rating-size);
         }
 
         .emoji {
@@ -62,7 +63,7 @@ export default class EmojiRating extends LitElement {
           color: rgba(0, 0, 0, 1);
         }
       </style>
-      <div class="rating" aria-size="${size}" aria-role="range" aria-valuemin="${min}" aria-valuemax="${max}" aria-valuenow="${value}">
+      <div class="rating" aria-role="range" aria-valuemin="${min}" aria-valuemax="${max}" aria-valuenow="${value}">
         ${repeat(emojiArray, (emoji, idx) => idx, this._renderEmoji)}
       </div>
     `;
