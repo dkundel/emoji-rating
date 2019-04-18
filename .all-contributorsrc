@@ -19,6 +19,17 @@
         "review",
         "doc"
       ]
+    },
+    {
+      "login": "Mateozmaldonado17",
+      "name": "Mateo Santiago Zapata Maldonado",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/5784157?v=4",
+      "profile": "https://github.com/Mateozmaldonado17",
+      "contributions": [
+        "code",
+        "example",
+        "ideas"
+      ]
     }
   ],
   "repoType": "github"
