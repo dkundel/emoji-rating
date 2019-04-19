@@ -14,8 +14,14 @@ export default class EmojiRating extends LitElement {
         type: Number,
       },
       emoji: {
+        type: String, 
+      },
+      size: {
         type: String,
       },
+      readOnly: {
+        type: Boolean
+      }
     };
   }
 
@@ -25,18 +31,26 @@ export default class EmojiRating extends LitElement {
     this.max = 5;
     this.value = 0;
     this.emoji = '🐼';
+    this.size = "25";
     this._renderEmoji = this._renderEmoji.bind(this);
     this._setValueOnClick = this._setValueOnClick.bind(this);
   }
 
   render() {
-    const { min, max, value, emoji } = this;
+    const { min, max, value, emoji, size } = this;
     const emojiArray = [...emoji.repeat(max)];
     return html`
       <style>
         .rating {
+          --emoji-rating-size: ${size};
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
           display: flex;
-          font-size: 3em;
+          font-size: var(--emoji-rating-size);
         }
 
         .emoji {
@@ -65,17 +79,20 @@ export default class EmojiRating extends LitElement {
   }
 
   async _setValueOnClick(event) {
-    const value = parseInt(event.target.dataset.idx, 10) + 1;
-    if (value === this.value) {
-      this.value = 0;
-    } else {
-      this.value = value;
+    const { readOnly } = this;
+    if (!readOnly) {
+      const value = parseInt(event.target.dataset.idx, 10) + 1;
+      if (value === this.value) {
+        this.value = 0;
+      } else {
+        this.value = value;
+      }
+  
+      await this.updateComplete;
+      this.dispatchEvent(
+        new CustomEvent('change', { detail: { value: this.value } })
+      );
     }
-
-    await this.updateComplete;
-    this.dispatchEvent(
-      new CustomEvent('change', { detail: { value: this.value } })
-    );
   }
 }
 
