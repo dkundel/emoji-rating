@@ -1,5 +1,5 @@
 <!-- BADGES:START -->
-[![npm](https://img.shields.io/npm/v/emoji-rating.svg?style=flat-square)](https://npmjs.com/packages/emoji-rating)[![npm](https://img.shields.io/npm/dt/emoji-rating.svg?style=flat-square)](https://npmjs.com/packages/emoji-rating)[![Build Status](https://img.shields.io/travis/undefined/undefined.svg?branch=master&style=flat-square)](https://travis-ci.org/undefined/undefined)[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)[![Code of Conduct](https://img.shields.io/badge/%F0%9F%92%96-Code%20of%20Conduct-ff69b4.svg?style=flat-square)](CODE_OF_CONDUCT.md)[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![npm](https://img.shields.io/npm/v/emoji-rating.svg?style=flat-square)](https://npmjs.com/packages/emoji-rating)[![npm](https://img.shields.io/npm/dt/emoji-rating.svg?style=flat-square)](https://npmjs.com/packages/emoji-rating)[![Build Status](https://img.shields.io/travis/undefined/undefined.svg?branch=master&style=flat-square)](https://travis-ci.org/undefined/undefined)[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)[![Code of Conduct](https://img.shields.io/badge/%F0%9F%92%96-Code%20of%20Conduct-ff69b4.svg?style=flat-square)](CODE_OF_CONDUCT.md)[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 <!-- BADGES:END -->
 
 # emoji-rating
@@ -52,8 +52,8 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars3.githubusercontent.com/u/1505101?v=4" width="100px;"/><br /><sub><b>Dominik Kundel</b></sub>](https://dkundel.com)<br />[💻](https://github.com/dkundel/emoji-rating/commits?author=dkundel "Code") [🎨](#design-dkundel "Design") [🤔](#ideas-dkundel "Ideas, Planning, & Feedback") [👀](#review-dkundel "Reviewed Pull Requests") [📖](https://github.com/dkundel/emoji-rating/commits?author=dkundel "Documentation") |
-| :---: |
+| [<img src="https://avatars3.githubusercontent.com/u/1505101?v=4" width="100px;"/><br /><sub><b>Dominik Kundel</b></sub>](https://dkundel.com)<br />[💻](https://github.com/dkundel/emoji-rating/commits?author=dkundel "Code") [🎨](#design-dkundel "Design") [🤔](#ideas-dkundel "Ideas, Planning, & Feedback") [👀](#review-dkundel "Reviewed Pull Requests") [📖](https://github.com/dkundel/emoji-rating/commits?author=dkundel "Documentation") | [<img src="https://avatars1.githubusercontent.com/u/5784157?v=4" width="100px;"/><br /><sub><b>Mateo Santiago Zapata Maldonado</b></sub>](https://github.com/Mateozmaldonado17)<br />[💻](https://github.com/dkundel/emoji-rating/commits?author=Mateozmaldonado17 "Code") [💡](#example-Mateozmaldonado17 "Examples") [🤔](#ideas-Mateozmaldonado17 "Ideas, Planning, & Feedback") |
+| :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
