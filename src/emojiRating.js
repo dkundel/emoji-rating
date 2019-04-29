@@ -50,7 +50,7 @@ export default class EmojiRating extends LitElement {
           -ms-user-select: none;
           user-select: none;
           display: flex;
-          font-size: var(--emoji-rating-size);
+          font-size: var(--emoji-rating-size, 3em);
         }
 
         .emoji {
